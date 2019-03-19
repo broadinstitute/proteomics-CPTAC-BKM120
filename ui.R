@@ -13,10 +13,10 @@ library(shiny)
 shinyUI(fluidPage(
 
     ## Application title
-    titlePanel(HTML(TITLESTRING)),
+    titlePanel(HTML(TITLESTRING), windowTitle = 'Mundt et al. Cancer Research 2018'),
     
     HTML('<br>'),
-    HTML('<b>Supplmental data:</b>'),
+    HTML('<b>Supplemental data:</b>'),
 
     fluidRow(
 
