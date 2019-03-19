@@ -8,9 +8,9 @@
 #################################################################
 
 source('pheatmap.r')
-library(pacman)
-p_load(scales)
-p_load(gtable)
+#library(pacman)
+library(scales)
+library(gtable)
 
 ## import the data
 load('BKM_data_2016-07-13.RData')
@@ -24,12 +24,12 @@ FILENAMESTRING <<- 'BKM120'
 GAPSIZEROW <<- 20
 
 
-##p_load(pheatmap)
-p_load(RColorBrewer)
-p_load(gplots)
-p_load(WriteXLS)
-p_load(grid)
-p_load(bcrypt)
+##library(pheatmap)
+library(RColorBrewer)
+library(gplots)
+library(WriteXLS)
+library(grid)
+library(bcrypt)
 
 ##################################################################
 ## 21060613 bcrypt
