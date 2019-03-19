@@ -13,7 +13,10 @@ library(shiny)
 shinyUI(fluidPage(
 
     ## Application title
-    titlePanel(TITLESTRING),
+    titlePanel(HTML(TITLESTRING)),
+    
+    HTML('<br>'),
+    HTML('<b>Supplmental data:</b>'),
 
     fluidRow(
 

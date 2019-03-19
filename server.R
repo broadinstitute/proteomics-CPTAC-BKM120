@@ -14,7 +14,7 @@ library(shiny)
 ########################################################
 shinyServer( function(input, output, session) {
 
-    global <- reactiveValues(auth=F)
+    global <- reactiveValues(auth=T)
 
     ##############################
     ## text field for passphrase
@@ -60,7 +60,8 @@ shinyServer( function(input, output, session) {
               ),
               HTML('<br><br>'),
               HTML('<p><b>Getting started</b></p>'),
-              helpText('Enter or paste your gene names of interest (official gene symbols, e.g. PIK3R2) into the text field. The text field accepts lists of up to 20 gene symbols in either comma-, semicolon-, or space-separated format.')
+              helpText('Enter or paste your gene names of interest (official gene symbols, e.g. PIK3R2) into the text field. The text field accepts lists of up to 20 gene symbols in either comma-, semicolon-, or space-separated format.'),
+              HTML('<p>For more details please see our publication <a href="http://cancerres.aacrjournals.org/content/78/10/2732" target="_blank_">Mundt <i>et al.</i> Cancer Research. 2018</a></p>')
           ))
     })
 

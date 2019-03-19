@@ -8,8 +8,9 @@
 #################################################################
 
 source('pheatmap.r')
-library(scales)
-library(gtable)
+library(pacman)
+p_load(scales)
+p_load(gtable)
 
 ## import the data
 load('BKM_data_2016-07-13.RData')
@@ -17,17 +18,18 @@ load('BKM_data_2016-07-13.RData')
 ## global parameters
 GENESSTART <<- 'PIK3R2 PIK3R1 AKT1 AKT2 AKT3 MTOR RPS6KB1 RPS6KA1 TSC2 PTEN PDK1 PDPK1 RB1'
 GENEMAX <<- 20
-TITLESTRING <<- 'BKM120 Omics Data Viewer'
+#TITLESTRING <<- 'BKM120 Omics Data Viewer'
+TITLESTRING <<- '<font size="5" face="times"><i><b>"Mass spectrometry-based proteomics reveals potential roles of NEK9 and MAP2K4 in resistance to PI3K inhibitors in triple negative breast cancers"</b></i> (<a href="http://cancerres.aacrjournals.org/content/78/10/2732" target="_blank_">Mundt <i>et al.</i> Cancer Research. 2018</a>)</font><br>'
 FILENAMESTRING <<- 'BKM120'
 GAPSIZEROW <<- 20
 
 
-##library(pheatmap)
-library(RColorBrewer)
-library(gplots)
-library(WriteXLS)
-library(grid)
-library(bcrypt)
+##p_load(pheatmap)
+p_load(RColorBrewer)
+p_load(gplots)
+p_load(WriteXLS)
+p_load(grid)
+p_load(bcrypt)
 
 ##################################################################
 ## 21060613 bcrypt
