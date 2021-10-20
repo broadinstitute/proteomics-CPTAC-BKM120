@@ -2,13 +2,12 @@
 ## Filename: global.r
 ## Created: March 19, 2016
 ## Author(s): Karsten Krug
-## Purpose: Shiny-app to visualize data of the BKM0120 project
+## Purpose: Shiny-app to visualize data of the BKM120 project
 ## This file imports the underlying data and contains global functions
 ## and variables used by 'ui.R' and 'server.R'
 #################################################################
 
 source('pheatmap.r')
-#library(pacman)
 library(scales)
 library(gtable)
 
@@ -18,7 +17,6 @@ load('BKM_data_2016-07-13.RData')
 ## global parameters
 GENESSTART <<- 'PIK3R2 PIK3R1 AKT1 AKT2 AKT3 MTOR RPS6KB1 RPS6KA1 TSC2 PTEN PDK1 PDPK1 RB1'
 GENEMAX <<- 20
-#TITLESTRING <<- 'BKM120 Omics Data Viewer'
 TITLESTRING <<- '<font size="5" face="times"><i><b>"Mass spectrometry-based proteomics reveals potential roles of NEK9 and MAP2K4 in resistance to PI3K inhibitors in triple negative breast cancers"</b></i> (<a href="http://cancerres.aacrjournals.org/content/78/10/2732" target="_blank_">Mundt <i>et al.</i> Cancer Research. 2018</a>)</font><br>'
 FILENAMESTRING <<- 'BKM120'
 GAPSIZEROW <<- 20
@@ -73,6 +71,7 @@ extractGenes <- function(genes.char){
     }
     return(genes.vec)
 }
+
 
 ##################################################################
 ## function to dynamically determine the height (in px) of the heatmap
@@ -166,10 +165,6 @@ findGenesInDataset <- function(gene, show.sites){
 #################################################################
 makeHM <- function(gene, filename=NA, expr=tab.expr.all, column.anno=column.anno, row.anno=row.anno, zscore='row', show.sites='all', min.val=-3, max.val=3, ...){
 
-    ##if(!global$auth)return()
-
-    ##min.val=-3
-    ##max.val=3
     min.val <- as.numeric(min.val)
     max.val <- as.numeric(max.val)
 

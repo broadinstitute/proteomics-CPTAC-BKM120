@@ -99,19 +99,6 @@ shinyServer( function(input, output, session) {
 
         filename = {
             paste( FILENAMESTRING, "_", length( extractGenes(input$genes) ), "_genes.pdf", sep='')
-            ##fn.tmp
-            ##if(input$zscore == 'row')
-            ##   fn.tmp <- paste(fn.tmp, 'Zscore', sep='_')
-            ##fn.tmp
-            ## if(input$all.sites == 'all')
-           ##     fn.tmp <- paste(fn.tmp, 'all_pSTY', sep='_')
-           ## if(input$all.sites == 'most variable')
-           ##     fn.tmp <- paste(fn.tmp, 'most_variable_pSTY', sep='_')
-
-            ##paste(fn.tmp, '.pdf', sep='')
-
-            ##paste( FILENAMESTRING, "_", length( extractGenes(input$genes) ), "_genes", paste(ifelse( input$zscore == 'row', '_Zscore_', '_')),
-            ##      input$allsites, '_pSTY.pdf', sep='')
         },
         content = function(file){
             genes.vec <- extractGenes( input$genes )
